@@ -1,3 +1,9 @@
+## [1.0.3](https://github.com/jcendal/markdown-convertor/compare/v1.0.2...v1.0.3) (2026-08-06)
+
+### Bug Fixes
+
+* add html to supported input formats and keywords ([58c1648](https://github.com/jcendal/markdown-convertor/commit/58c1648390412be52e5ec93c355f474eac0d7884))
+
 ## [1.0.1](https://github.com/jcendal/markdown-convertor/compare/v1.0.0...v1.0.1) (2026-08-06)
 
 ### Bug Fixes
