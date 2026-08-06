@@ -2,7 +2,7 @@
 
 # Any Markdown Converter
 
-**Bidirectional document conversion: any file format ↔ Markdown. Powered by anydoc (Rust) and pandoc-wasm.**
+**Bidirectional document conversion: any file format ↔ Markdown. Powered by anydoc (Rust), turndown, and pandoc-wasm.**
 
 [![Version](https://img.shields.io/open-vsx/v/jcendal/any-markdown-converter?style=flat-square&label=Version)](https://open-vsx.org/extension/jcendal/any-markdown-converter)
 [![Downloads](https://img.shields.io/open-vsx/dt/jcendal/any-markdown-converter?style=flat-square&label=Downloads)](https://open-vsx.org/extension/jcendal/any-markdown-converter)
@@ -12,7 +12,7 @@
 [Features](#-features) • [Installation](#-installation) • [Usage](#-usage) •
 [Settings](#%EF%B8%8F-settings) • [How It Works](#-how-it-works)
 
-[![Install in VS Code / Cursor](https://img.shields.io/badge/VSCode%2FCursor-Install-007ACC?style=for-the-badge&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0yMy4xNSAyLjU4N0wxOC4yMS4yMWExLjQ5NCAxLjQ5NCAwIDAgMC0xLjcwNS4yOWwtOS40NiA4LjYzLTQuMTItMy4xMjhhLjk5OS45OTkgMCAwIDAtMS4yNzYuMDU3TC4zMjcgNy4yNjFBMSAxIDAgMCAwIC4zMjYgOC43NEwzLjg5OSAxMiAuMzI2IDE1LjI2YTEgMSAwIDAgMCAuMDAxIDEuNDc5TDEuNjUgMTcuOTRhLjk5OS45OTkgMCAwIDAgMS4yNzYuMDU3bDQuMTItMy4xMjggOS40NiA4LjYzYTEuNDkyIDEuNDkyIDAgMCAwIDEuNzA0LjI5bDQuOTQyLTIuMzc3QTEuNSAxLjUgMCAwIDAgMjQgMjAuMDZWMy45MzlhMS41IDEuNSAwIDAgMC0uODUtMS4zNTJ6bS01LjE0NiAxNC44NjFMMTAuODI2IDEybDcuMTc4LTUuNDQ4djEwLjg5NnoiLz48L3N2Zz4=)](https://marketplace.visualstudio.com/items?itemName=jcendal.markdown-convertor)
+[![Install in VS Code / Cursor](https://img.shields.io/badge/VSCode%2FCursor-Install-007ACC?style=for-the-badge&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0yMy4xNSAyLjU4N0wxOC4yMS4yMWExLjQ5NCAxLjQ5NCAwIDAgMC0xLjcwNS4yOWwtOS40NiA4LjYzLTQuMTItMy4xMjhhLjk5OS45OTkgMCAwIDAtMS4yNzYuMDU3TC4zMjcgNy4yNjFBMSAxIDAgMCAwIC4zMjYgOC43NEwzLjg5OSAxMiAuMzI2IDE1LjI2YTEgMSAwIDAgMCAuMDAxIDEuNDc5TDEuNjUgMTcuOTRhLjk5OS45OTkgMCAwIDAgMS4yNzYuMDU3bDQuMTItMy4xMjggOS40NiA4LjYzYTEuNDkyIDEuNDkyIDAgMCAwIDEuNzA0LjI5bDQuOTQyLTIuMzc3QTEuNSAxLjUgMCAwIDAgMjQgMjAuMDZWMy45MzlhMS41IDEuNSAwIDAgMC0uODUtMS4zNTJ6bS01LjE0NiAxNC44NjFMMTAuODI2IDEybDcuMTc4LTUuNDQ4djEwLjg5NnoiLz48L3N2Zz4=)](https://marketplace.visualstudio.com/items?itemName=jcendal.any-markdown-converter)
 &nbsp;&nbsp;
 [![Install from Open VSX](https://img.shields.io/badge/Open%20VSX-Install-764ABC?style=for-the-badge&logo=eclipse&logoColor=white)](https://open-vsx.org/extension/jcendal/any-markdown-converter)
 
@@ -22,17 +22,18 @@
 
 ## 📖 About
 
-Working with documents in VS Code or Cursor often means switching between multiple formats — Word specs, PowerPoint decks, Excel spreadsheets, scanned PDFs, and more. But your editor speaks Markdown.
+Working with documents in VS Code or Cursor often means switching between multiple formats — Word specs, PowerPoint decks, Excel spreadsheets, scanned PDFs, HTML pages, and more. But your editor speaks Markdown.
 
-This extension bridges that gap. It converts **any document to Markdown** using [anydoc](https://github.com/firecrawl/anydoc) (a Rust-based extraction engine), and exports **Markdown back** to Word, PowerPoint, Excel, PDF, EPUB, HTML, RTF, and ODT — all without leaving your editor.
+This extension bridges that gap. It converts **any document to Markdown** using [anydoc](https://github.com/firecrawl/anydoc) (a Rust-based extraction engine) and [turndown](https://github.com/mixmark-io/turndown) (for HTML files), and exports **Markdown back** to Word, PowerPoint, Excel, PDF, EPUB, HTML, RTF, and ODT — all without leaving your editor.
 
 ### 🎯 Key Highlights
 
 - 🔄 **Bidirectional** — Import any format to Markdown, and export Markdown to 8+ formats
-- 📄 **20+ input formats** — doc, docx, pptx, xlsx, odt, ods, odp, rtf, epub, csv, pdf, and more
+- 📄 **20+ input formats** — doc, docx, pptx, xlsx, odt, ods, odp, rtf, epub, csv, pdf, html, and more
 - 📊 **8 export targets** — PDF, DOCX, PPTX, XLSX, EPUB, HTML, RTF, ODT
-- 🦀 **Rust-powered extraction** — Fast, accurate conversion via anydoc (WASM)
-- 📝 **pandoc-wasm** — EPUB, RTF, and ODT exports via pandoc running in WebAssembly
+- 🦀 **Rust-powered extraction** — Fast, accurate conversion via anydoc (native NAPI-RS addon)
+- 🌐 **HTML → Markdown** — Clean conversion with body extraction via turndown
+- 📝 **pandoc-wasm** — EPUB, RTF, and ODT exports via pandoc running in WebAssembly (optional)
 - 🖨️ **PDF with Mermaid** — Diagrams rendered as real SVG graphics via Chrome
 - 🔒 **Privacy-first** — Everything runs locally, no data leaves your machine
 - 🖥️ **No bundled browser** — Uses your installed Chrome/Chromium for PDF
@@ -44,14 +45,15 @@ This extension bridges that gap. It converts **any document to Markdown** using 
 | Feature | Description |
 | --- | --- |
 | **Any → Markdown** | Convert 20+ document formats to clean Markdown |
+| **HTML → Markdown** | Convert HTML/HTM files with body extraction and tag cleanup |
 | **Markdown → PDF** | With Mermaid diagrams rendered as real SVG graphics |
 | **Markdown → DOCX** | Microsoft Word document |
 | **Markdown → PPTX** | PowerPoint presentation (slides separated by `---`) |
 | **Markdown → XLSX** | Excel spreadsheet (from Markdown tables) |
-| **Markdown → EPUB** | E-book format via pandoc-wasm |
-| **Markdown → HTML** | Standalone HTML page |
-| **Markdown → RTF** | Rich Text Format via pandoc-wasm |
-| **Markdown → ODT** | OpenDocument Text via pandoc-wasm |
+| **Markdown → EPUB** | E-book format via pandoc-wasm (optional) |
+| **Markdown → HTML** | Standalone HTML page with inline styles |
+| **Markdown → RTF** | Rich Text Format via pandoc-wasm (optional) |
+| **Markdown → ODT** | OpenDocument Text via pandoc-wasm (optional) |
 | **Preview** | Preview any document as Markdown without saving |
 | **Context menus** | Right-click in editor, explorer, or use Command Palette |
 
@@ -61,6 +63,7 @@ This extension bridges that gap. It converts **any document to Markdown** using 
 | --- | --- |
 | **Microsoft Office** | `.doc`, `.docx`, `.docm`, `.ppt`, `.pptx`, `.pptm`, `.pps`, `.ppsx`, `.ppsm`, `.pot`, `.xls`, `.xlsx`, `.xlsm`, `.xlsb` |
 | **OpenDocument** | `.odt`, `.ods`, `.odp` |
+| **Web** | `.html`, `.htm` |
 | **Other** | `.rtf`, `.epub`, `.csv`, `.pdf` |
 
 ---
@@ -167,7 +170,7 @@ The browser is **auto-detected**. If detection fails:
 }
 ```
 
-For **EPUB, RTF, and ODT export**, pandoc-wasm is downloaded automatically on first use (one-time setup).
+For **EPUB, RTF, and ODT export**, the `pandoc-wasm` package is required. It is declared as an optional dependency — if it is not available, these three export formats will be disabled and the extension will notify you. All other conversions work without it.
 
 All other conversions work out of the box with no additional dependencies.
 
@@ -176,31 +179,40 @@ All other conversions work out of the box with no additional dependencies.
 ## 🏗️ How It Works
 
 ```
-              ┌── anydoc (Rust/WASM) ──────────────────────────────────────────┐
-              │                                                                │
-┌───────────┐ │  ┌──────────────┐     ┌──────────────────────┐     ┌────────┐  │
-│ doc/docx  │─┤  │  anydoc      │ ──▶ │  Markdown            │     │  .md   │  │
-│ pptx/xlsx │ │  │  (Rust WASM) │     │                      │     │        │  │
-│ pdf/epub  │ │  └──────────────┘     └──────────────────────┘     └────────┘  │
-│ odt/csv   │ │                                                                │
-└───────────┘ └────────────────────────────────────────────────────────────────┘
+              ┌── Import engines ───────────────────────────────────────────┐
+              │                                                             │
+              │  ┌───────────────┐                                          │
+┌───────────┐ │  │ anydoc        │                              ┌────────┐  │
+│ doc/docx  │─┤  │ (Rust native) │──────────────────────────────│  .md   │  │
+│ pptx/xlsx │ │  └───────────────┘                              │        │  │
+│ pdf/epub  │ │                                                 └────────┘  │
+│ odt/csv   │ │  ┌───────────────┐                              ┌────────┐  │
+│           │ │  │ turndown      │                              │  .md   │  │
+│ html/htm  │─┤  │ (HTML → MD)   │──────────────────────────────│        │  │
+└───────────┘ │  └───────────────┘                              └────────┘  │
+              │                                                             │
+              └─────────────────────────────────────────────────────────────┘
 
-              ┌── Export engines ──────────────────────────────────────────────┐
-              │                                                                │
-┌───────────┐ │  md-to-docx ─────────────────────────────────▶  .docx         │
-│           │ │  pptxgenjs ──────────────────────────────────▶  .pptx         │
-│   .md     │─┤  exceljs ───────────────────────────────────▶  .xlsx         │
-│           │ │  puppeteer-core + Chrome + Mermaid.js ──────▶  .pdf          │
-│           │ │  marked ────────────────────────────────────▶  .html         │
-└───────────┘ │  pandoc-wasm ───────────────────────────────▶  .epub/.rtf/.odt│
-              │                                                                │
-              └────────────────────────────────────────────────────────────────┘
+              ┌── Export engines ────────────────────────────────────────────┐
+              │                                                             │
+┌───────────┐ │  md-to-docx ──────────────────────────────────▶  .docx     │
+│           │ │  pptxgenjs ───────────────────────────────────▶  .pptx     │
+│   .md     │─┤  exceljs ────────────────────────────────────▶  .xlsx     │
+│           │ │  puppeteer-core + Chrome + Mermaid.js ────────▶  .pdf     │
+│           │ │  marked ─────────────────────────────────────▶  .html     │
+└───────────┘ │  pandoc-wasm (optional) ─────────────────────▶  .epub     │
+              │  pandoc-wasm (optional) ─────────────────────▶  .rtf      │
+              │  pandoc-wasm (optional) ─────────────────────▶  .odt      │
+              │                                                             │
+              └─────────────────────────────────────────────────────────────┘
 ```
 
 ### Import (Any → Markdown)
 
-1. The file is processed by [anydoc](https://github.com/firecrawl/anydoc), a Rust-based document extraction engine compiled to WASM
-2. Text, tables, images, and structure are extracted and converted to clean Markdown
+| Input | Engine |
+| --- | --- |
+| **Office, PDF, EPUB, CSV, and other binary formats** | [anydoc](https://github.com/firecrawl/anydoc) — Rust-based document extraction engine compiled to a native Node.js addon via NAPI-RS |
+| **HTML / HTM** | [turndown](https://github.com/mixmark-io/turndown) — extracts `<body>` content, strips `<script>`, `<style>`, and `<noscript>` tags, then converts to clean Markdown |
 
 ### Export (Markdown → ...)
 
@@ -211,7 +223,7 @@ All other conversions work out of the box with no additional dependencies.
 | **PPTX** | [pptxgenjs](https://github.com/gitbrent/PptxGenJS) — slides split on `---` separators |
 | **XLSX** | [exceljs](https://github.com/exceljs/exceljs) — Markdown tables → spreadsheet |
 | **HTML** | [marked](https://github.com/markedjs/marked) → standalone HTML with inline styles |
-| **EPUB, RTF, ODT** | [pandoc-wasm](https://github.com/pandoc/pandoc-wasm) — downloaded on first use |
+| **EPUB, RTF, ODT** | [pandoc-wasm](https://github.com/nicolo-ribaudo/tc39-proposal-pandoc-wasm) — optional dependency |
 
 ---
 
@@ -232,7 +244,7 @@ This extension runs **entirely on your local machine**:
 | --- | --- |
 | Complex Mermaid diagrams render incompletely | Increase `pdf.mermaidWaitMs` (e.g. `8000` or `15000`) |
 | Chrome not found for PDF export | Set `chromePath` manually in settings |
-| pandoc-wasm first-use download is slow | One-time setup — subsequent exports are instant |
+| EPUB/RTF/ODT export unavailable | These formats require `pandoc-wasm`, which is an optional dependency |
 | Some scanned PDFs extract poorly | Quality depends on the document's text layer |
 
 ---
@@ -255,14 +267,15 @@ This extension is built on top of these excellent open-source projects:
 
 | Library | Role |
 | --- | --- |
-| [anydoc](https://github.com/firecrawl/anydoc) | Rust-based document extraction engine (any format → Markdown) |
+| [anydoc](https://github.com/firecrawl/anydoc) | Rust-based document extraction engine (any format → Markdown) via native NAPI-RS addon |
+| [turndown](https://github.com/mixmark-io/turndown) | HTML → Markdown conversion with body extraction and tag cleanup |
 | [marked](https://github.com/markedjs/marked) | Markdown parser for HTML and PDF generation |
 | [puppeteer-core](https://github.com/puppeteer/puppeteer) | Headless Chrome automation for PDF rendering |
 | [Mermaid.js](https://mermaid.js.org/) | Diagram rendering as SVG in PDF output |
 | [md-to-docx](https://github.com/MohtashamMurshid/md-to-docx) | Markdown to Word document conversion |
 | [PptxGenJS](https://github.com/gitbrent/PptxGenJS) | Markdown to PowerPoint presentation generation |
 | [ExcelJS](https://github.com/exceljs/exceljs) | Markdown tables to Excel spreadsheet conversion |
-| [pandoc-wasm](https://github.com/pandoc/pandoc-wasm) | EPUB, RTF, and ODT export via pandoc in WebAssembly |
+| [pandoc-wasm](https://github.com/nicolo-ribaudo/tc39-proposal-pandoc-wasm) | EPUB, RTF, and ODT export via pandoc in WebAssembly (optional) |
 | [semantic-release](https://github.com/semantic-release/semantic-release) | Automated versioning and release management |
 
 ---
@@ -277,6 +290,6 @@ This extension is built on top of these excellent open-source projects:
 
 **Built with ❤️ for the developer community**
 
-[⬆ Back to Top](#markdown-converter)
+[⬆ Back to Top](#any-markdown-converter)
 
 </div>
