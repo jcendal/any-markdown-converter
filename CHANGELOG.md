@@ -1,3 +1,9 @@
+## [1.0.1](https://github.com/jcendal/markdown-converter/compare/v1.0.0...v1.0.1) (2026-08-06)
+
+### Bug Fixes
+
+* remove --no-dependencies from CI packaging ([b9ec097](https://github.com/jcendal/markdown-converter/commit/b9ec09742e331bba8716c5e809bf83bbd1734c13))
+
 ## 1.0.0 (2026-08-06)
 
 ### Features
