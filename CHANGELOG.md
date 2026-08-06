@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/jcendal/markdown-convertor/compare/v1.0.1...v1.0.2) (2026-08-06)
+
+### Bug Fixes
+
+* rename package to markdown-convertor for marketplace availability ([da3e1f8](https://github.com/jcendal/markdown-convertor/commit/da3e1f80ef8f16a3d232a76ad3a59512d9bb79a8))
+* update all references from markdown-converter to markdown-convertor ([8a0f8f0](https://github.com/jcendal/markdown-convertor/commit/8a0f8f08d4f8a018c872efd3deeb067b8d9a329d))
+
 ## [1.0.1](https://github.com/jcendal/markdown-converter/compare/v1.0.0...v1.0.1) (2026-08-06)
 
 ### Bug Fixes
