@@ -1,3 +1,9 @@
+## 1.0.0 (2026-08-06)
+
+### Features
+
+* initial release of Markdown Converter ([64f4c0e](https://github.com/jcendal/markdown-converter/commit/64f4c0ee47e60f1cba6ffbe4adb311c7ccdb63b0))
+
 # Changelog
 
 ## 0.1.0
