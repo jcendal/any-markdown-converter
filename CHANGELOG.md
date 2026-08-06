@@ -1,3 +1,9 @@
+## [1.0.5](https://github.com/jcendal/any-markdown-converter/compare/v1.0.4...v1.0.5) (2026-08-06)
+
+### Bug Fixes
+
+* use unique display name for marketplace ([67cedd0](https://github.com/jcendal/any-markdown-converter/commit/67cedd09235c60ea6e3af22c4da41c8948fdc562))
+
 ## [1.0.4](https://github.com/jcendal/any-markdown-converter/compare/v1.0.3...v1.0.4) (2026-08-06)
 
 ### Bug Fixes
