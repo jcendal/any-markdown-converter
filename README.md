@@ -4,9 +4,9 @@
 
 **Bidirectional document conversion: any file format ↔ Markdown. Powered by anydoc (Rust) and pandoc-wasm.**
 
-[![Version](https://img.shields.io/open-vsx/v/jcendal/markdown-convertor?style=flat-square&label=Version)](https://open-vsx.org/extension/jcendal/markdown-convertor)
-[![Downloads](https://img.shields.io/open-vsx/dt/jcendal/markdown-convertor?style=flat-square&label=Downloads)](https://open-vsx.org/extension/jcendal/markdown-convertor)
-[![Rating](https://img.shields.io/open-vsx/rating/jcendal/markdown-convertor?style=flat-square&label=Rating)](https://open-vsx.org/extension/jcendal/markdown-convertor)
+[![Version](https://img.shields.io/open-vsx/v/jcendal/any-markdown-converter?style=flat-square&label=Version)](https://open-vsx.org/extension/jcendal/any-markdown-converter)
+[![Downloads](https://img.shields.io/open-vsx/dt/jcendal/any-markdown-converter?style=flat-square&label=Downloads)](https://open-vsx.org/extension/jcendal/any-markdown-converter)
+[![Rating](https://img.shields.io/open-vsx/rating/jcendal/any-markdown-converter?style=flat-square&label=Rating)](https://open-vsx.org/extension/jcendal/any-markdown-converter)
 [![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](LICENSE)
 
 [Features](#-features) • [Installation](#-installation) • [Usage](#-usage) •
@@ -14,7 +14,7 @@
 
 [![Install in VS Code / Cursor](https://img.shields.io/badge/VSCode%2FCursor-Install-007ACC?style=for-the-badge&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0yMy4xNSAyLjU4N0wxOC4yMS4yMWExLjQ5NCAxLjQ5NCAwIDAgMC0xLjcwNS4yOWwtOS40NiA4LjYzLTQuMTItMy4xMjhhLjk5OS45OTkgMCAwIDAtMS4yNzYuMDU3TC4zMjcgNy4yNjFBMSAxIDAgMCAwIC4zMjYgOC43NEwzLjg5OSAxMiAuMzI2IDE1LjI2YTEgMSAwIDAgMCAuMDAxIDEuNDc5TDEuNjUgMTcuOTRhLjk5OS45OTkgMCAwIDAgMS4yNzYuMDU3bDQuMTItMy4xMjggOS40NiA4LjYzYTEuNDkyIDEuNDkyIDAgMCAwIDEuNzA0LjI5bDQuOTQyLTIuMzc3QTEuNSAxLjUgMCAwIDAgMjQgMjAuMDZWMy45MzlhMS41IDEuNSAwIDAgMC0uODUtMS4zNTJ6bS01LjE0NiAxNC44NjFMMTAuODI2IDEybDcuMTc4LTUuNDQ4djEwLjg5NnoiLz48L3N2Zz4=)](https://marketplace.visualstudio.com/items?itemName=jcendal.markdown-convertor)
 &nbsp;&nbsp;
-[![Install from Open VSX](https://img.shields.io/badge/Open%20VSX-Install-764ABC?style=for-the-badge&logo=eclipse&logoColor=white)](https://open-vsx.org/extension/jcendal/markdown-convertor)
+[![Install from Open VSX](https://img.shields.io/badge/Open%20VSX-Install-764ABC?style=for-the-badge&logo=eclipse&logoColor=white)](https://open-vsx.org/extension/jcendal/any-markdown-converter)
 
 ---
 
@@ -70,7 +70,7 @@ This extension bridges that gap. It converts **any document to Markdown** using 
 Open VS Code / Cursor, launch Quick Open (`Ctrl+P` / `Cmd+P`), and run:
 
 ```
-ext install jcendal.markdown-convertor
+ext install jcendal.any-markdown-converter
 ```
 
 Or search for **Markdown Converter** in the Extensions sidebar.
@@ -241,7 +241,7 @@ This extension runs **entirely on your local machine**:
 
 Contributions, issues, and feature requests are welcome!
 
-1. Fork the [repository](https://github.com/jcendal/markdown-convertor)
+1. Fork the [repository](https://github.com/jcendal/any-markdown-converter)
 2. Create your feature branch (`git checkout -b feature/amazing-feature`)
 3. Commit your changes (`git commit -m 'feat: add amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)

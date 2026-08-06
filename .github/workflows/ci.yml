@@ -27,6 +27,6 @@ jobs:
       - name: Upload VSIX artifact
         uses: actions/upload-artifact@v4
         with:
-          name: markdown-convertor-vsix
+          name: any-markdown-converter-vsix
           path: "*.vsix"
           if-no-files-found: error

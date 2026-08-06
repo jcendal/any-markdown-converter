@@ -1,5 +1,5 @@
 {
-  "name": "markdown-convertor",
+  "name": "any-markdown-converter",
   "displayName": "Markdown Converter",
   "description": "Bidirectional document conversion: any file format ↔ Markdown. Powered by anydoc (Rust) and pandoc-wasm.",
   "version": "1.0.3",
@@ -7,7 +7,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jcendal/markdown-convertor"
+    "url": "https://github.com/jcendal/any-markdown-converter"
   },
   "icon": "icon.png",
   "galleryBanner": {
