@@ -1,21 +1,14 @@
-## [1.0.2](https://github.com/jcendal/markdown-convertor/compare/v1.0.1...v1.0.2) (2026-08-06)
+## [1.0.1](https://github.com/jcendal/markdown-convertor/compare/v1.0.0...v1.0.1) (2026-08-06)
 
 ### Bug Fixes
 
-* rename package to markdown-convertor for marketplace availability ([da3e1f8](https://github.com/jcendal/markdown-convertor/commit/da3e1f80ef8f16a3d232a76ad3a59512d9bb79a8))
-* update all references from markdown-converter to markdown-convertor ([8a0f8f0](https://github.com/jcendal/markdown-convertor/commit/8a0f8f08d4f8a018c872efd3deeb067b8d9a329d))
-
-## [1.0.1](https://github.com/jcendal/markdown-converter/compare/v1.0.0...v1.0.1) (2026-08-06)
-
-### Bug Fixes
-
-* remove --no-dependencies from CI packaging ([b9ec097](https://github.com/jcendal/markdown-converter/commit/b9ec09742e331bba8716c5e809bf83bbd1734c13))
+* remove --no-dependencies from CI packaging ([b9ec097](https://github.com/jcendal/markdown-convertor/commit/b9ec09742e331bba8716c5e809bf83bbd1734c13))
 
 ## 1.0.0 (2026-08-06)
 
 ### Features
 
-* initial release of Markdown Converter ([64f4c0e](https://github.com/jcendal/markdown-converter/commit/64f4c0ee47e60f1cba6ffbe4adb311c7ccdb63b0))
+* initial release of Markdown Converter ([64f4c0e](https://github.com/jcendal/markdown-convertor/commit/64f4c0ee47e60f1cba6ffbe4adb311c7ccdb63b0))
 
 # Changelog
 
