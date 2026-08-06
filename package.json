@@ -39,17 +39,17 @@
       {
         "command": "markdownConverter.convertToMarkdown",
         "title": "Convert to Markdown",
-        "category": "Markdown Converter"
+        "category": "Any Markdown Converter"
       },
       {
         "command": "markdownConverter.convertFromMarkdown",
         "title": "Export Markdown to...",
-        "category": "Markdown Converter"
+        "category": "Any Markdown Converter"
       },
       {
         "command": "markdownConverter.previewAsMarkdown",
         "title": "Preview as Markdown",
-        "category": "Markdown Converter"
+        "category": "Any Markdown Converter"
       }
     ],
     "menus": {
@@ -91,7 +91,7 @@
       ]
     },
     "configuration": {
-      "title": "Markdown Converter",
+      "title": "Any Markdown Converter",
       "properties": {
         "markdownConverter.chromePath": {
           "type": "string",

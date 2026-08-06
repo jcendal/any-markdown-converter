@@ -1,6 +1,6 @@
 <div align="center">
 
-# Markdown Converter
+# Any Markdown Converter
 
 **Bidirectional document conversion: any file format ↔ Markdown. Powered by anydoc (Rust) and pandoc-wasm.**
 
@@ -73,7 +73,7 @@ Open VS Code / Cursor, launch Quick Open (`Ctrl+P` / `Cmd+P`), and run:
 ext install jcendal.any-markdown-converter
 ```
 
-Or search for **Markdown Converter** in the Extensions sidebar.
+Or search for **Any Markdown Converter** in the Extensions sidebar.
 
 ---
 
@@ -81,23 +81,23 @@ Or search for **Markdown Converter** in the Extensions sidebar.
 
 ### Convert a document to Markdown
 
-Right-click any supported file in the Explorer sidebar or within the editor, then select **Markdown Converter: Convert to Markdown**.
+Right-click any supported file in the Explorer sidebar or within the editor, then select **Any Markdown Converter: Convert to Markdown**.
 
 You can also use the Command Palette (`Cmd+Shift+P` / `Ctrl+Shift+P`) and search for `Convert to Markdown`.
 
 ### Export Markdown to another format
 
-Right-click any `.md` file in the Explorer sidebar or within the editor, then select **Markdown Converter: Export Markdown to...**
+Right-click any `.md` file in the Explorer sidebar or within the editor, then select **Any Markdown Converter: Export Markdown to...**
 
 A quick pick menu will appear with all available export formats.
 
 ### Preview as Markdown
 
-Use the Command Palette to run **Markdown Converter: Preview as Markdown** to see a preview of any supported document without creating a file.
+Use the Command Palette to run **Any Markdown Converter: Preview as Markdown** to see a preview of any supported document without creating a file.
 
 ### Other access methods
 
-- **Command Palette** — `Cmd+Shift+P` / `Ctrl+Shift+P` → search for `Markdown Converter`
+- **Command Palette** — `Cmd+Shift+P` / `Ctrl+Shift+P` → search for `Any Markdown Converter`
 - **Editor title bar** — top-right area when a supported file is active
 
 The output file is saved alongside the source file and opens automatically.

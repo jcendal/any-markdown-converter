@@ -55,7 +55,7 @@ class PandocLoader {
   private updateStatusBar(): void {
     switch (this.state) {
       case PandocState.Downloading:
-        this.statusBarItem.text = '$(sync~spin) Markdown Converter: Setting up...';
+        this.statusBarItem.text = '$(sync~spin) Any Markdown Converter: Setting up...';
         this.statusBarItem.tooltip =
           'Setting up additional export capabilities. This only happens once.';
         this.statusBarItem.backgroundColor = new vscode.ThemeColor(
@@ -64,7 +64,7 @@ class PandocLoader {
         this.statusBarItem.show();
         break;
       case PandocState.Ready:
-        this.statusBarItem.text = '$(check) Markdown Converter: Ready';
+        this.statusBarItem.text = '$(check) Any Markdown Converter: Ready';
         this.statusBarItem.tooltip = 'All export formats are available.';
         this.statusBarItem.backgroundColor = undefined;
         this.statusBarItem.show();
@@ -75,7 +75,7 @@ class PandocLoader {
         }, 5000);
         break;
       case PandocState.Error:
-        this.statusBarItem.text = '$(error) Markdown Converter: Setup incomplete';
+        this.statusBarItem.text = '$(error) Any Markdown Converter: Setup incomplete';
         this.statusBarItem.tooltip =
           'Could not set up some export formats. EPUB/RTF/ODT export unavailable.';
         this.statusBarItem.backgroundColor = new vscode.ThemeColor(
@@ -107,7 +107,7 @@ class PandocLoader {
     const progressResult = await vscode.window.withProgress(
       {
         location: vscode.ProgressLocation.Notification,
-        title: 'Markdown Converter',
+        title: 'Any Markdown Converter',
         cancellable: false,
       },
       async (progress) => {
@@ -121,7 +121,7 @@ class PandocLoader {
           this.setState(PandocState.Ready);
 
           vscode.window.showInformationMessage(
-            'Markdown Converter: Setup complete. All export formats are now available.'
+            'Any Markdown Converter: Setup complete. All export formats are now available.'
           );
 
           return this.pandoc;
@@ -132,7 +132,7 @@ class PandocLoader {
           const errorMsg =
             err instanceof Error ? err.message : 'Unknown error';
           vscode.window.showErrorMessage(
-            `Markdown Converter: Setup incomplete — ${errorMsg}. ` +
+            `Any Markdown Converter: Setup incomplete — ${errorMsg}. ` +
             'Some export formats (EPUB, RTF, ODT) will not be available.'
           );
           throw err;

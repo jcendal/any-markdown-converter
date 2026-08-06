@@ -7,14 +7,14 @@ export async function handleConvertToMarkdown(uri?: vscode.Uri): Promise<void> {
   const targetUri = uri || vscode.window.activeTextEditor?.document.uri;
 
   if (!targetUri) {
-    vscode.window.showWarningMessage('Markdown Converter: No file selected.');
+    vscode.window.showWarningMessage('Any Markdown Converter: No file selected.');
     return;
   }
 
   const ext = path.extname(targetUri.fsPath).toLowerCase();
   if (!ext || ext === '.md') {
     vscode.window.showWarningMessage(
-      'Markdown Converter: This file is already Markdown or has no extension.'
+      'Any Markdown Converter: This file is already Markdown or has no extension.'
     );
     return;
   }
@@ -22,7 +22,7 @@ export async function handleConvertToMarkdown(uri?: vscode.Uri): Promise<void> {
   await vscode.window.withProgress(
     {
       location: vscode.ProgressLocation.Notification,
-      title: 'Markdown Converter',
+      title: 'Any Markdown Converter',
       cancellable: false,
     },
     async (progress) => {
@@ -61,7 +61,7 @@ export async function handleConvertToMarkdown(uri?: vscode.Uri): Promise<void> {
         }
       } catch (err) {
         const msg = err instanceof Error ? err.message : String(err);
-        vscode.window.showErrorMessage(`Markdown Converter: Conversion failed — ${msg}`);
+        vscode.window.showErrorMessage(`Any Markdown Converter: Conversion failed — ${msg}`);
       }
     }
   );

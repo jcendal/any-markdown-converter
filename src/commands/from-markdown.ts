@@ -26,12 +26,12 @@ export async function handleConvertFromMarkdown(uri?: vscode.Uri): Promise<void>
   const targetUri = uri || vscode.window.activeTextEditor?.document.uri;
 
   if (!targetUri) {
-    vscode.window.showWarningMessage('Markdown Converter: No file selected.');
+    vscode.window.showWarningMessage('Any Markdown Converter: No file selected.');
     return;
   }
 
   if (path.extname(targetUri.fsPath).toLowerCase() !== '.md') {
-    vscode.window.showWarningMessage('Markdown Converter: This command only works with .md files.');
+    vscode.window.showWarningMessage('Any Markdown Converter: This command only works with .md files.');
     return;
   }
 
@@ -54,7 +54,7 @@ export async function handleConvertFromMarkdown(uri?: vscode.Uri): Promise<void>
 
   const selected = await vscode.window.showQuickPick(items, {
     placeHolder: 'Select export format',
-    title: 'Markdown Converter: Export to...',
+    title: 'Any Markdown Converter: Export to...',
   });
 
   if (!selected) return;
@@ -66,7 +66,7 @@ async function doConversion(uri: vscode.Uri, format: ExportFormat): Promise<void
   await vscode.window.withProgress(
     {
       location: vscode.ProgressLocation.Notification,
-      title: 'Markdown Converter',
+      title: 'Any Markdown Converter',
       cancellable: false,
     },
     async (progress) => {
@@ -164,7 +164,7 @@ th{background:#f4f4f4}</style></head><body>${htmlBody}</body></html>`;
         }
       } catch (err) {
         const msg = err instanceof Error ? err.message : String(err);
-        vscode.window.showErrorMessage(`Markdown Converter: Export to ${format.toUpperCase()} failed — ${msg}`);
+        vscode.window.showErrorMessage(`Any Markdown Converter: Export to ${format.toUpperCase()} failed — ${msg}`);
       }
     }
   );
