@@ -22,7 +22,7 @@ jobs:
       - run: npm run build
 
       - name: Package extension
-        run: npx @vscode/vsce package --no-dependencies
+        run: npx @vscode/vsce package
 
       - name: Upload VSIX artifact
         uses: actions/upload-artifact@v4
