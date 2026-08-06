@@ -1,3 +1,9 @@
+## [1.0.6](https://github.com/jcendal/any-markdown-converter/compare/v1.0.5...v1.0.6) (2026-08-06)
+
+### Bug Fixes
+
+* rename all references from Markdown Converter to Any Markdown Converter ([1a0667c](https://github.com/jcendal/any-markdown-converter/commit/1a0667c765221357b42c7ed40c94879599e39313))
+
 ## [1.0.5](https://github.com/jcendal/any-markdown-converter/compare/v1.0.4...v1.0.5) (2026-08-06)
 
 ### Bug Fixes
