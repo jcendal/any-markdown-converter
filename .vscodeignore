@@ -1,0 +1,16 @@
+src/**
+.github/**
+.gitignore
+.releaserc.json
+tsconfig.json
+esbuild.mjs
+*.vsix
+.vscode/**
+AUTHORS
+CHANGELOG.md
+package-lock.json
+node_modules
+!node_modules/@firecrawl
+node_modules/@firecrawl/**/README.md
+node_modules/@firecrawl/**/cli.js
+node_modules/@firecrawl/**/*.d.ts

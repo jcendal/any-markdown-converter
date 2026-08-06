@@ -1,0 +1,182 @@
+{
+  "name": "markdown-converter",
+  "displayName": "Markdown Converter",
+  "description": "Bidirectional document conversion: any file format ↔ Markdown. Powered by anydoc (Rust) and pandoc-wasm.",
+  "version": "0.1.0",
+  "publisher": "jcendal",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jcendal/markdown-converter"
+  },
+  "icon": "icon.png",
+  "galleryBanner": {
+    "color": "#1a1a2e",
+    "theme": "dark"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other",
+    "Formatters"
+  ],
+  "keywords": [
+    "markdown",
+    "docx",
+    "pptx",
+    "xlsx",
+    "pdf",
+    "converter",
+    "anydoc",
+    "pandoc"
+  ],
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "markdownConverter.convertToMarkdown",
+        "title": "Convert to Markdown",
+        "category": "Markdown Converter"
+      },
+      {
+        "command": "markdownConverter.convertFromMarkdown",
+        "title": "Export Markdown to...",
+        "category": "Markdown Converter"
+      },
+      {
+        "command": "markdownConverter.previewAsMarkdown",
+        "title": "Preview as Markdown",
+        "category": "Markdown Converter"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "when": "resourceExtname =~ /\\.(docx?|docm|pptx?|pps|pot|pptm|ppsx|ppsm|xlsx?|xlsm|xlsb|odt|ods|odp|rtf|epub|csv|pdf|pdf|html?)$/i",
+          "command": "markdownConverter.convertToMarkdown",
+          "group": "markdownconverter@1"
+        },
+        {
+          "when": "resourceExtname == .md",
+          "command": "markdownConverter.convertFromMarkdown",
+          "group": "markdownconverter@1"
+        }
+      ],
+      "editor/context": [
+        {
+          "when": "resourceExtname =~ /\\.(docx?|docm|pptx?|pps|pot|pptm|ppsx|ppsm|xlsx?|xlsm|xlsb|odt|ods|odp|rtf|epub|csv|pdf|html?)$/i",
+          "command": "markdownConverter.convertToMarkdown",
+          "group": "markdownconverter@1"
+        },
+        {
+          "when": "resourceLangId == markdown",
+          "command": "markdownConverter.convertFromMarkdown",
+          "group": "markdownconverter@1"
+        }
+      ],
+      "editor/title": [
+        {
+          "when": "resourceExtname =~ /\\.(docx?|docm|pptx?|pps|pot|pptm|ppsx|ppsm|xlsx?|xlsm|xlsb|odt|ods|odp|rtf|epub|csv|pdf|html?)$/i",
+          "command": "markdownConverter.convertToMarkdown",
+          "group": "navigation"
+        },
+        {
+          "when": "resourceLangId == markdown",
+          "command": "markdownConverter.convertFromMarkdown",
+          "group": "navigation"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Markdown Converter",
+      "properties": {
+        "markdownConverter.chromePath": {
+          "type": "string",
+          "default": "",
+          "description": "Path to Chrome/Chromium executable (for PDF export). Leave empty for auto-detection."
+        },
+        "markdownConverter.pdf.pageSize": {
+          "type": "string",
+          "default": "A4",
+          "enum": [
+            "A4",
+            "Letter",
+            "Legal",
+            "A3",
+            "A5",
+            "Tabloid"
+          ],
+          "description": "PDF page size."
+        },
+        "markdownConverter.pdf.orientation": {
+          "type": "string",
+          "default": "portrait",
+          "enum": [
+            "portrait",
+            "landscape"
+          ],
+          "description": "PDF page orientation."
+        },
+        "markdownConverter.pdf.fontSize": {
+          "type": "number",
+          "default": 13,
+          "description": "Base font size in pixels for PDF export."
+        },
+        "markdownConverter.pdf.showPageNumbers": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show page numbers in PDF footer."
+        },
+        "markdownConverter.pdf.mermaidWaitMs": {
+          "type": "number",
+          "default": 4000,
+          "minimum": 1000,
+          "maximum": 30000,
+          "description": "Milliseconds to wait for Mermaid diagram rendering."
+        },
+        "markdownConverter.openAfterExport": {
+          "type": "boolean",
+          "default": true,
+          "description": "Open the generated file after export."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "build": "node esbuild.mjs",
+    "watch": "node esbuild.mjs --watch",
+    "package": "npx @vscode/vsce package",
+    "publish:openvsx": "npx ovsx publish *.vsix",
+    "semantic-release": "semantic-release",
+    "lint": "tsc --noEmit",
+    "vscode:prepublish": "npm run build"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@types/node": "^22.0.0",
+    "@types/turndown": "^5.0.6",
+    "@types/vscode": "^1.85.0",
+    "@vscode/vsce": "^3.0.0",
+    "conventional-changelog-conventionalcommits": "^8.0.0",
+    "esbuild": "^0.24.0",
+    "ovsx": "^0.10.0",
+    "semantic-release": "^24.0.0",
+    "semantic-release-vsce": "^5.7.0",
+    "typescript": "^5.7.0"
+  },
+  "dependencies": {
+    "@firecrawl/anydoc": "^0.1.6",
+    "@mohtasham/md-to-docx": "^3.0.1",
+    "exceljs": "^4.4.0",
+    "marked": "^14.0.0",
+    "pptxgenjs": "^4.0.1",
+    "puppeteer-core": "^24.0.0",
+    "turndown": "^7.2.4"
+  },
+  "optionalDependencies": {
+    "pandoc-wasm": "^1.1.0"
+  }
+}
