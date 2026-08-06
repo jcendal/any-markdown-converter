@@ -1,6 +1,6 @@
 {
   "name": "any-markdown-converter",
-  "displayName": "Markdown Converter",
+  "displayName": "Any Markdown Converter",
   "description": "Bidirectional document conversion: any file format ↔ Markdown. Powered by anydoc (Rust) and pandoc-wasm.",
   "version": "1.0.4",
   "publisher": "jcendal",
