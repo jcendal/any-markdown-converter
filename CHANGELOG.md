@@ -1,3 +1,9 @@
+## [1.0.4](https://github.com/jcendal/any-markdown-converter/compare/v1.0.3...v1.0.4) (2026-08-06)
+
+### Bug Fixes
+
+* rename package to any-markdown-converter ([4deecbb](https://github.com/jcendal/any-markdown-converter/commit/4deecbb4b122f829e27c63d0c0371434a61f8a71))
+
 ## [1.0.3](https://github.com/jcendal/markdown-convertor/compare/v1.0.2...v1.0.3) (2026-08-06)
 
 ### Bug Fixes

@@ -2,7 +2,7 @@
   "name": "any-markdown-converter",
   "displayName": "Markdown Converter",
   "description": "Bidirectional document conversion: any file format ↔ Markdown. Powered by anydoc (Rust) and pandoc-wasm.",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "publisher": "jcendal",
   "license": "MIT",
   "repository": {
