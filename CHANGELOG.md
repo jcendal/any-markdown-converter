@@ -1,3 +1,9 @@
+## [1.1.0](https://github.com/jcendal/any-markdown-converter/compare/v1.0.6...v1.1.0) (2026-08-09)
+
+### Features
+
+* add usage screenshots to README ([4258f95](https://github.com/jcendal/any-markdown-converter/commit/4258f95f9a36ecb3bcc84ca38a22b2787096d58d))
+
 ## [1.0.6](https://github.com/jcendal/any-markdown-converter/compare/v1.0.5...v1.0.6) (2026-08-06)
 
 ### Bug Fixes
